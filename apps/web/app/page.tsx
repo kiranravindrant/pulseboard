@@ -1,19 +1,18 @@
 import Image from "next/image";
 import { Button } from "../../../packages/ui/src/button";
 
+import Link from "next/link";
+
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        
+    <main className="p-10 space-x-4">
+      <Link href="/login">
+        <Button>Login</Button>
+      </Link>
 
-        <label className="mb-4 text-2xl font-bold">Web App</label>
-        <Button appName="web">Design System Button</Button>
-
-
-
-
-      </main>
-    </div>
+      <Link href="/dashboard">
+        <Button>Go to Dashboard</Button>
+      </Link>
+    </main>
   );
 }
